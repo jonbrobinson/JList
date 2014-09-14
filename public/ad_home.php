@@ -1,4 +1,4 @@
-<? include_once 'header.php';?>
+<? include('header.php');?>
 
   <div class="container theme-showcase" role="main">
 
@@ -27,4 +27,4 @@
 
   </div> <!-- /container -->
 
-<? include_once 'footer.php';?>
+<? include('footer.php');?>
