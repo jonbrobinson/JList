@@ -16,6 +16,9 @@
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 
+    <!-- FontAwesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="theme.css" rel="stylesheet">
   </head>
