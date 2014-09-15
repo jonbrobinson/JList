@@ -2,7 +2,6 @@
 <?php
 	if(!empty($_POST))
 	{
-		
 		function read_csv(){
 			$ads = [];
 			$handle = fopen('ads.csv', 'r');
@@ -41,7 +40,7 @@
 			<select name="category" class="form-control">
 				<option value="Automotive">Automotive</option>
 				<option value="Jobs">Jobs</option>
-				<option value="Properties">Housing/Rental Properties</option>
+				<option value="Housing">Housing/Rental Properties</option>
 				<option value="Dating">Dating</option>
 				<option value="Deals">Deals</option>
 			</select>
