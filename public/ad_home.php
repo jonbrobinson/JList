@@ -1,27 +1,48 @@
 <? include('header.php');?>
+<?php
+  function read_csv(){
+    $ads = [];
+    $handle = fopen('ads.csv', 'r');
+    while(!feof($handle)){
+        $row = fgetcsv($handle);
+        if(is_array($row)){
+            $ads[] = $row;
+        }
+    }
+    fclose($handle);
+    return $ads;
+  }
 
+  $ads = read_csv();
+
+?>
   <div class="container theme-showcase" role="main">
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-      <h1>J List</h1>
+      <h1>Welcome to J List</h1>
       <h3>***Disclaimer - Demo Site***</h3>
-      <p>This is not a real website. This site was built to demonstra my skills using PHP HTML CSS and Twitter bootstrap.  PLese enjoy the site as an art piece.</p>
+      <p>This is not a real website. This site was built to demonstra my skills using PHP HTML CSS and Twitter bootstrap.  Plese enjoy the site as an art piece. And if you are looking for a PHP programmer please feel to reach out to me.</p>
+      <p>Also check out my porfolio page <a href="http://jonbrobinson.com">Jonbroinson.com</a></p>
     </div>
 
     <table class="table">
       <tr>
+        <th>Category</th>
         <th>Ad Title</th>
         <th>Created By</th>
         <th>Created Date</th>
         <th>Contat</th>
       </tr>
+      <?php foreach($ads as $index => $ad):?>
       <tr>
-        <td>First Ad</td>
-        <td>Jon Rob</td>
-        <td>Todays Date</td>
-        <td>myEmail@mail.com</td>
+        <td><?= $ad[0];?></td>
+        <td><?= $ad[1];?></td>
+        <td><?= $ad[3];?></td>
+        <td><?= $ad[5];?></td>
+        <td><?= $ad[4];?></td>
       </tr>
+      <?php endforeach;?>
     </table>
 
 
