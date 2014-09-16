@@ -20,15 +20,16 @@
 	    {
 	    	$createdAt = date('D, d M Y');
 	    	array_push($array,$createdAt);
-	        $handle = fopen('ads.csv', 'a');
+	        $handle = fopen('ads.csv', 'w');
             fputcsv($handle,$array);
 	        fclose($handle);
 	    }
 
 	   	$ads = read_csv();
-	    $new_ad = write_csv($_POST);
-
+	   	$new_ad = [$_POST['title'],];
 	    array_push($ads, $new_ad);
+	    write_csv($ads);
+
 	    header('location:ad_home.php');
 	    exit;
 	}
