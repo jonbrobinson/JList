@@ -23,7 +23,7 @@
       <h1>Welcome to J List</h1>
       <h3>***Disclaimer - Demo Site***</h3>
       <p>This is not a real website. This site was built to demonstra my skills using PHP HTML CSS and Twitter bootstrap.  Plese enjoy the site as an art piece. And if you are looking for a PHP programmer please feel to reach out to me.</p>
-      <p>Also check out my porfolio page <a href="http://jonbrobinson.com">Jonbroinson.com</a></p>
+      <p>Also check out my porfolio page <a href="http://jonbrobinson.com">Jonbrobinson.com</a></p>
     </div>
     <div class="col-md-3">
       <h3><i class="fa fa-star"></i> Featured Ad</h3>
