@@ -18,16 +18,15 @@
 
 		function write_csv($array)
 	    {
-	    	$createdAt = date('D, d M Y');
-	    	array_push($array,$createdAt);
 	        $handle = fopen('ads.csv', 'w');
             fputcsv($handle,$array);
 	        fclose($handle);
 	    }
 
+	    $createdAt = date('D, d M Y');
 	   	$ads = read_csv();
-	   	$new_ad = [$_POST['title'],];
-	    array_push($ads, $new_ad);
+	   	$new_ad = [$_POST['title'],$_POST['body'], $_POST['contact_name'],$_POST['contact_email'], $createdAt];
+	    $ads[] = $new_ad;
 	    write_csv($ads);
 
 	    header('location:ad_home.php');
