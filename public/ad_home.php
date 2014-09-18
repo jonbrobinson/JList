@@ -1,5 +1,9 @@
 <? include('header.php');?>
 <?php
+
+  require_once ('ad_manager.class.php');
+  require_once ('ads.class.php');
+
   function read_csv(){
     $ads = [];
     $handle = fopen('ads.csv', 'r');
